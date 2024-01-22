@@ -1,7 +1,6 @@
 <html>
   <head>
     <title>Directions Service</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <style>
       /* 
       * Always set the map height explicitly to define the size of the div element
@@ -35,6 +34,8 @@
         padding-left: 10px;
       }
     </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
 
     <script type="module" src="story.js"></script>
   </head>
@@ -82,7 +83,7 @@
       -->
       <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly"
-      async
+      defer
     ></script>
   </body>
 </html>

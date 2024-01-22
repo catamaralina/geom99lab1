@@ -2,8 +2,8 @@ function initMap() {
   const directionsService = new google.maps.DirectionsService();
   const directionsRenderer = new google.maps.DirectionsRenderer();
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 12,
-    center: { lat: 34.94, lng: 135.56 },
+    zoom: 7,
+    center: { lat: 34.9875139, lng: 135.7575207 },
   });
 
   directionsRenderer.setMap(map);
@@ -33,4 +33,4 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
     .catch((e) => window.alert("Directions request failed due to " + status));
 }
 
-window.initMap = initMap; 
+window.initMap = initMap;
