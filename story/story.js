@@ -90,3 +90,21 @@ class ClickEventHandler {
 }
 
 window.initMap = initMap;
+
+
+async function initMap() {
+  // Request needed libraries.
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+  const map = new Map(document.getElementById("map"), {
+    center: { lat: 34.9660541, lng: 135.6445377 },
+    zoom: 14,
+    mapId: "Fushimi+Inari+Taisha",
+  });
+  const marker = new AdvancedMarkerElement({
+    map,
+    position: { lat: 34.9660541, lng: 135.6445377 },
+  });
+}
+
+initMap();
