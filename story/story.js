@@ -4,7 +4,7 @@ FROM: https://developers.google.com/maps/documentation/javascript/examples/map-s
 function initMap() {
   const origin = { lat: 34.9875139, lng: 135.7575207 };
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 16,
+    zoom: 18,
     center: origin,
   });
 
