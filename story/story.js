@@ -2,8 +2,8 @@ function initMap() {
   const directionsService = new google.maps.DirectionsService();
   const directionsRenderer = new google.maps.DirectionsRenderer();
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 18,
-    center: { lat: 41.85, lng: -87.65 },
+    zoom: 12,
+    center: { lat: 34.94, lng: 135.56 },
   });
 
   directionsRenderer.setMap(map);
