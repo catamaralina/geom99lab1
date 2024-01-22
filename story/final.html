@@ -146,30 +146,29 @@
                 <p class="menu">Places to go. . </p> <!-- MAP DESCRIPTION-->
                 <p class="menu">Again and again. . .</p>
                 <p class="menu">and forever. . .</p>
+                <p class="menu">and forever. . .</p>
             </div>
-            
-            <div id="map"></div>
-            <div id="infowindow-content">
-              <img id="place-icon" src="" height="16" width="16" />
-              <span id="place-name" class="title"></span><br />
-              Place ID <span id="place-id"></span><br />
-              <span id="place-address"></span>
-            </div>
-        
-            <!-- 
-              The `defer` attribute causes the callback to execute after the full HTML
-              document has been parsed. For non-blocking uses, avoiding race conditions,
-              and consistent behavior across browsers, consider loading using Promises.
-              See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
-              for more information.
-              -->
-            <script
-              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=places&v=weekly"
-              async
-            ></script>
-
         </div>
 
+        <div id="map"></div>
+        <div id="infowindow-content">
+          <img id="place-icon" src="" height="16" width="16" />
+          <span id="place-name" class="title"></span><br />
+          Place ID <span id="place-id"></span><br />
+          <span id="place-address"></span>
+        </div>
+    
+        <!-- 
+          The `defer` attribute causes the callback to execute after the full HTML
+          document has been parsed. For non-blocking uses, avoiding race conditions,
+          and consistent behavior across browsers, consider loading using Promises.
+          See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+          for more information.
+          -->
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=places&v=weekly"
+          async
+        ></script>
         
     </body>
 
