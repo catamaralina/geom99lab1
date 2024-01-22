@@ -1,15 +1,19 @@
 <html>
   <head>
-    <title>POI Click Events</title>
+    <title>Directions Service</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
+      /* 
+      * Always set the map height explicitly to define the size of the div element
+      * that contains the map. 
+      */
       #map {
         height: 100%;
       }
 
-      /* Optional: Makes the sample page fill the window. */
+      /* 
+      * Optional: Makes the sample page fill the window. 
+      */
       html,
       body {
         height: 100%;
@@ -17,29 +21,57 @@
         padding: 0;
       }
 
-      .title {
-        font-weight: bold;
-      }
-
-      #infowindow-content {
-        display: none;
-      }
-
-      #map #infowindow-content {
-        display: inline;
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: "Roboto", "sans-serif";
+        line-height: 30px;
+        padding-left: 10px;
       }
     </style>
-    <!-- <link rel="stylesheet" type="text/css" href="./style.css" /> -->
-    <script type="module" src="./story.js"></script>
+
+    <script type="module" src="story.js"></script>
   </head>
   <body>
-    <div id="map"></div>
-    <div id="infowindow-content">
-      <img id="place-icon" src="" height="16" width="16" />
-      <span id="place-name" class="title"></span><br />
-      Place ID <span id="place-id"></span><br />
-      <span id="place-address"></span>
+    <div id="floating-panel">
+      <b>Start: </b>
+      <select id="start">
+        <option value="frederick, md">Frederick, MD</option>
+        <option value="harpers ferry, wv">Harpers Ferry, WV</option>
+        <option value="harrisburg, wv">Harrisburg, WV</option>
+        <option value="selinsgrove, pa">Selinsgrove, PA</option>
+        <option value="washington, dc">Washington, DC</option>
+        <option value="seneca rocks, wv">Seneca Rocks, WV</option>
+        <option value="waynesboro, va">Waynesboro, VA</option>
+        <option value="front royal, va">Front Royal, VA</option>
+        <option value="baltimore, md">Baltimore, MD</option>
+        <option value="gettysburg, pa">Gettysburg, PA</option>
+        <option value="buffalo, ny">Buffalo, NY</option>
+        <option value="painted post, ny">Painted Post, NY</option>
+      </select>
+      <b>End: </b>
+      <select id="end">
+        <option value="frederick, md">Frederick, MD</option>
+        <option value="harpers ferry, wv">Harpers Ferry, WV</option>
+        <option value="harrisburg, wv">Harrisburg, WV</option>
+        <option value="selinsgrove, pa">Selinsgrove, PA</option>
+        <option value="washington, dc">Washington, DC</option>
+        <option value="seneca rocks, wv">Seneca Rocks, WV</option>
+        <option value="waynesboro, va">Waynesboro, VA</option>
+        <option value="front royal, va">Front Royal, VA</option>
+        <option value="baltimore, md">Baltimore, MD</option>
+        <option value="gettysburg, pa">Gettysburg, PA</option>
+        <option value="buffalo, ny">Buffalo, NY</option>
+        <option value="painted post, ny">Painted Post, NY</option>
+      </select>
     </div>
+    <div id="map"></div>
 
     <!-- 
       The `defer` attribute causes the callback to execute after the full HTML
@@ -50,7 +82,7 @@
       -->
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly"
-      defer
+      async
     ></script>
   </body>
 </html>
