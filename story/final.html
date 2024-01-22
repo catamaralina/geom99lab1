@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>POI Click Events</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <style>
+        /*BODY*/
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #F9AABB;
+            float: center;
+            font-family: 'Lucida Sans Regular', sans-serif;
+        }
+
+        div.intro, .banner, .section {
+            border: solid #e46b85 2px;
+            max-width: 900px;
+            align-content: center;
+            background-color: #25242A;
+            margin: auto;
+            padding: 20px;
+            float: center;
+            margin-bottom: 10px;
+            height: auto;
+        }
+
+        div.banner {
+            background-color: white;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        div.menu {
+            border: solid #F9AABB;
+            background-color: none;
+            max-width: 30%;
+            margin: auto;
+        }
+
+
+        .section {
+            border-color: #25242A;
+            background-color: white;
+            position: relative;
+            float: inline;
+
+        }
+
+        .container {
+            /*border: solid black 2px; */
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 0px;
+        }
+        .sidemenu {
+            border: solid #F9AABB 2px;
+            background-color: none;
+            height: 100%;
+            float: right;
+            position: relative;
+            align-self: right;
+            margin-top: 4px;  /*to line up image and menu appropriately*/
+        }
+
+
+        /*TEXT FORMATTING*/
+        h1, h2, h3, p, a {
+            color: #25242A;
+            text-align: center;
+        }
+        h1.menu, h2.menu, p.menu, a.menu {
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+        }
+        .source {
+            text-align: left;
+        }
+
+        a:hover {
+            color: #e46b85;
+        }
+
+
+        /*IMAGE FORMATTING*/
+        /*Header and footer*/
+        img.main { 
+            display: block;
+            float: center;
+            margin: auto;
+            max-width: 100%;
+        }
+
+        /*Section formatting*/
+        img.side {
+            float: left;
+            margin: auto;
+            max-width: 100%;
+            height: 100%;
+            border: solid #F9AABB 2px;
+        }
+
+        iframe {
+            height: auto;
+            width: 100%;
+            height: 100%;
+            border: solid black 2px;
+            position: relative;
+        }
+
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+
+
+        .title {
+            font-weight: bold;
+        }
+
+        #infowindow-content {
+            display: none;
+        }
+
+        #map #infowindow-content {
+            display: inline;
+        }
+        </style>
+        <script type="module" src="final.js"></script>
+    </head>
+
+    <body>
+        <div class="intro">
+            <div>
+                <h1 class="menu">Catamaralina's Heckin' Tasty Recipes</h1><!--  MAP TITLE -->
+                <p class="menu">Yes, I've tried these. And made them again.</p> <!-- MAP DESCRIPTION-->
+                <p class="menu">And again. . .</p>
+            </div>
+            
+            <div class="menu"> <!-- MAP IN HERE-->
+                <div id="map"></div>
+                <div id="infowindow-content">
+                  <img id="place-icon" src="" height="16" width="16" />
+                  <span id="place-name" class="title"></span><br />
+                  Place ID <span id="place-id"></span><br />
+                  <span id="place-address"></span>
+                </div>
+            
+                <!-- 
+                  The `defer` attribute causes the callback to execute after the full HTML
+                  document has been parsed. For non-blocking uses, avoiding race conditions,
+                  and consistent behavior across browsers, consider loading using Promises.
+                  See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+                  for more information.
+                  -->
+                  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly" 
+                  defer>
+                </script>
+            </div>
+        </div>
+
+        
+    </body>
+
+
+</html>
