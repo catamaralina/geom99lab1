@@ -6,8 +6,22 @@
     <style>
         /* Always set the map height explicitly to define the size of the div
         * element that contains the map. */
+        div.content, .banner {
+          border: solid #e46b85 2px;
+          max-width: 900px;
+          align-content: center;
+          background-color: white;
+          margin: auto;
+          padding: 20px;
+          float: center;
+          margin-bottom: 10px;
+          height: auto;
+        }
+
         #map {
             height: 50%;
+            width: 50%;
+
         }
 
         /* Optional: Makes the sample page fill the window. */
@@ -16,6 +30,9 @@
             height: 100%;
             margin: 0;
             padding: 0;
+            background-color: #F9AABB;
+            float: center;
+            font-family: 'Lucida Sans Regular', sans-serif;
         }
 
         .title {
@@ -29,19 +46,26 @@
         #map #infowindow-content {
             display: inline;
         }
+        h1 { color: #25242A; text-align: center;}
     </style>
 
     <script type="module" src="final.js"></script>
   </head>
   <body>
-    <div id="map"></div>
-    <div id="infowindow-content">
-      <img id="place-icon" src="" height="16" width="16" />
-      <span id="place-name" class="title"></span><br />
-      Place ID <span id="place-id"></span><br />
-      <span id="place-address"></span>
+    <div class="banner">
+      <h1>KYOTO POI</h1>
     </div>
+    
+    <div class="content">
+      <div id="map"></div>
 
+      <div id="infowindow-content">
+        <img id="place-icon" src="" height="16" width="16" />
+        <span id="place-name" class="title"></span><br />
+        Place ID <span id="place-id"></span><br />
+        <span id="place-address"></span>
+      </div>
+    </div>
     <!-- 
       The `defer` attribute causes the callback to execute after the full HTML
       document has been parsed. For non-blocking uses, avoiding race conditions,
