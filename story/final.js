@@ -1,4 +1,4 @@
-const parser = new DOMParser();
+// const parser = new DOMParser();
 /* -----
   OWNER: https://developers.google.com/maps/documentation/javascript/examples/event-poi
 ----- */
