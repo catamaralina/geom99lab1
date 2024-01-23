@@ -65,7 +65,8 @@ async function initMap() {
     const marker = new AdvancedMarkerElement({
       position,
       map,
-      title: `${i + 1}. ${title}`,
+      /*Display name*/
+      title: `(${i + 1})  ${title}`,
       content: pin.element,
     });
 
