@@ -1,18 +1,42 @@
 function initMap() {
-    const origin = { lat: 39.3214618, lng: -77.7401632 };
+    const origin = { lat: 34.9862398, lng: 135.7569057 };
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 16,
       center: origin,
     });
-  
+    
+    const KyotoStation = new google.maps.Marker({
+        position: { lat: 34.9862398, lng: 135.7569057 },
+        map,
+        title: "Kyoto Station",
+      });
+
+    const Tokiwacho = new google.maps.Marker({
+        position: { lat: 34.9915697, lng: 135.7537306 },
+        map,
+        title: "Tokiwacho",
+    });
+
+    const Aquarium = new google.maps.Marker({
+        position: { lat: 34.9868132, lng: 135.7509563 },
+        map,
+        title: "Kyoto Aquarium",
+    });
+
+    const MaruyamaPark = new google.maps.Marker({
+        position: { lat: 35.0000173, lng: 135.7722135 },
+        map,
+        title: "Maruyama Park",
+    });
+
     new ClickEventHandler(map, origin);
   }
   
-  function isIconMouseEvent(e) {
+function isIconMouseEvent(e) {
     return "placeId" in e;
   }
   
-  class ClickEventHandler {
+class ClickEventHandler {
     origin;
     map;
     directionsService;
@@ -33,40 +57,40 @@ function initMap() {
       // Listen for clicks on the map.
       this.map.addListener("click", this.handleClick.bind(this));
     }
-    handleClick(event) {
-      console.log("You clicked on: " + event.latLng);
-      // If the event has a placeId, use it.
-      if (isIconMouseEvent(event)) {
-        console.log("You clicked on place:" + event.placeId);
-        // Calling e.stop() on the event prevents the default info window from
-        // showing.
-        // If you call stop here when there is no placeId you will prevent some
-        // other map click event handlers from receiving the event.
-        event.stop();
-        if (event.placeId) {
-          this.calculateAndDisplayRoute(event.placeId);
-          this.getPlaceInformation(event.placeId);
-        }
-      }
+handleClick(event) {
+    console.log("You clicked on: " + event.latLng);
+    // If the event has a placeId, use it.
+    if (isIconMouseEvent(event)) {
+    console.log("You clicked on place:" + event.placeId);
+    // Calling e.stop() on the event prevents the default info window from
+    // showing.
+    // If you call stop here when there is no placeId you will prevent some
+    // other map click event handlers from receiving the event.
+    event.stop();
+    if (event.placeId) {
+        this.calculateAndDisplayRoute(event.placeId);
+        this.getPlaceInformation(event.placeId);
     }
-    calculateAndDisplayRoute(placeId) {
-      const me = this;
-  
-      this.directionsService
-        .route({
-          origin: this.origin,
-          destination: { placeId: placeId },
-          travelMode: google.maps.TravelMode.WALKING,
-        })
-        .then((response) => {
-          me.directionsRenderer.setDirections(response);
-        })
-        .catch((e) => window.alert("Directions request failed due to " + status));
     }
-    getPlaceInformation(placeId) {
-      const me = this;
+}
+calculateAndDisplayRoute(placeId) {
+    const me = this;
+
+    this.directionsService
+    .route({
+        origin: this.origin,
+        destination: { placeId: placeId },
+        travelMode: google.maps.TravelMode.WALKING,
+    })
+    .then((response) => {
+        me.directionsRenderer.setDirections(response);
+    })
+    .catch((e) => window.alert("Directions request failed due to " + status));
+    }
+getPlaceInformation(placeId) {
+    const me = this;
   
-      this.placesService.getDetails({ placeId: placeId }, (place, status) => {
+    this.placesService.getDetails({ placeId: placeId }, (place, status) => {
         if (
           status === "OK" &&
           place &&
