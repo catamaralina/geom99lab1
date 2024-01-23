@@ -9,7 +9,7 @@ async function initMap() {
     /*Gets map*/
     const map = new google.maps.Map(document.getElementById("map"), {
       center: origin,
-      zoom: 15,
+      zoom: 14,
     });
     
     /*PLACES MARKERS*/
