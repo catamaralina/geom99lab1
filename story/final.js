@@ -16,44 +16,43 @@ async function initMap() {
     const KyotoTower = new google.maps.Marker({
       map,
       position: { lat: 34.9893453, lng: 135.7566664 },
-      title: "京都タワー",
+      title: "Kyoto Tower", /*京都タワー*/
       });
 
     const Tokiwacho = new google.maps.Marker({
       map, 
       position: { lat: 34.991349, lng: 135.758469 },
-      title: "常葉町",
+      title: "Tokiwacho", /*常葉町*/
     });
 
     const Aquarium = new google.maps.Marker({
       map,  
       position: { lat: 34.9873555, lng: 135.7461619 },
-      title: "京都水族館",
+      title: "Kyoto Aquarium", /*京都水族館*/
     });
 
     const MaruyamaPark = new google.maps.Marker({
       map, 
       position: { lat: 34.9983422, lng: 135.771512 },
-      title: "円山公園",
+      title: "Maruyama Park", /*円山公園*/
     });
 
     const Daimonji = new google.maps.Marker({
       map, 
       position: { lat: 35.0228405, lng: 135.8049198 },
-      title: "京都 五山送り火",
+      title: "Gozan no Okuribi", /*京都 五山送り火*/
     });
 
     const Kamogawa = new google.maps.Marker({
       map,
       position: { lat: 35.0376503, lng: 135.7604489 },
-
-      title: "鴨川公園",
+      title: "Kamogawa Park",/*鴨川公園*/
     });
 
     const NtlGarden = new google.maps.Marker({
-      position: { lat: 35.021703, lng: 135.757493 },
       map,
-      title: "京都御苑",
+      position: { lat: 35.021703, lng: 135.757493 },
+      title: "Kyoto National Garden",/*京都御苑*/
     });
 
     /*SIMPLE CLICK EVENTS*/
