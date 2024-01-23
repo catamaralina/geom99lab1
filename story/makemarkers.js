@@ -5,8 +5,8 @@ async function initMap() {
     "marker",
   );
   const map = new Map(document.getElementById("map"), {
-    zoom: 12,
-    center: { lat: 34.9862398, lng: 135.7569057 },
+    zoom: 13,
+    center: { lat: 35.0105252, lng: 135.7496023 },
     mapId: "4504f8b37365c3d0",
   });
   // Set LatLng and title text for the markers. The first marker (Boynton Pass)
@@ -14,7 +14,7 @@ async function initMap() {
   // move between markers; press tab again to cycle through the map controls.
   const tourStops = [
     {
-      position: { lat: 34.9893453, lng: 135.7566664 },
+      position: { lat: 34.9875299, lng: 135.7591874 },
       title: "Kyoto Tower",
     },
     {
@@ -22,7 +22,7 @@ async function initMap() {
       title: "Tokiwacho",
     },
     {
-      position: { lat: 34.9873555, lng: 135.7461619},
+      position: { lat: 35.0094004, lng: 135.7676267},
       title: "Kyoto Aquarium",
     },
     {
