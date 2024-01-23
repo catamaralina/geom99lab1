@@ -1,7 +1,9 @@
-async function initMap() {
-    const directionsService = await google.maps.importLibrary(); /*"routes"*/
+async function initMap() { /*async*/ 
+    const directionsService = new google.maps.importLibrary(); /*await*/ /*"routes"*/
     const directionsRenderer = new google.maps.DirectionsRenderer();
     const origin = { lat: 34.9862398, lng: 135.7569057 };
+    
+    /*Gets map*/
     const map = new google.maps.Map(document.getElementById("map"), {
       center: origin,
       zoom: 15,
@@ -43,6 +45,20 @@ async function initMap() {
       position: { lat: 35.0032821, lng: 135.7739591 },
       map,
       title: "Pancake Room",
+    });
+
+    /*SIMPLE CLICK EVENTS*/
+    /*ZOOM IN THEN OUT*/
+    map.addListener("center_changed", () => {
+      // 3 seconds after the center of the map has changed, pan back to the
+      // marker.
+      window.setTimeout(() => {
+        map.panTo(marker.getPosition());
+      }, 3000);
+    });
+    marker.addListener("click", () => {
+      map.setZoom(8);
+      map.setCenter(marker.getPosition());
     });
 
     new ClickEventHandler(map, origin);
