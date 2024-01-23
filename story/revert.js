@@ -41,6 +41,18 @@ async function initMap() {
       position: { lat: 35.021703, lng: 135.757493 },
       title: "Kyoto National Garden",
     },
+    {
+      position: { lat: 35.0151827, lng: 135.6712193 },
+      title: "Arashiyama Park",
+    },
+    {
+      position: { lat: 34.8928089, lng: 135.812774 },
+      title: "Mt Uji",
+    },
+    {
+      position: { lat: 34.9671305, lng: 135.7745999 },
+      title: "Fushimi Inari",
+    },
   ];
   // Create an info window to share between markers.
   const infoWindow = new InfoWindow();
