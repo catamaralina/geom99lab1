@@ -1,10 +1,10 @@
 async function initMap() {
-    const directionsService = await google.maps.importLibrary("routes");
+    const directionsService = await google.maps.importLibrary(); /*"routes"*/
     const directionsRenderer = new google.maps.DirectionsRenderer();
     const origin = { lat: 34.9862398, lng: 135.7569057 };
     const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 15,
       center: origin,
+      zoom: 15,
     });
     
     /*PLACES MARKERS*/
