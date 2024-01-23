@@ -215,5 +215,5 @@ function isIconMouseEvent(e) {
   }
   }
   
-  // window.initMap = initMap;
+  window.initMap = initMap;
   initMap();
