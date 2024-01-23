@@ -7,20 +7,21 @@ async function initMap() {
       center: origin,
     });
     
+    /*PLACES MARKERS*/
     const KyotoStation = new google.maps.Marker({
-        position: { lat: 34.9862398, lng: 135.7569057 },
+        position: { lat: 34.9861821, lng: 135.7570678 },
         map,
         title: "Kyoto Station",
       });
 
     const Tokiwacho = new google.maps.Marker({
-        position: { lat: 34.9915697, lng: 135.7537306 },
+        position: { lat: 34.9916608, lng: 135.7575092 },
         map,
         title: "Tokiwacho",
     });
 
     const Aquarium = new google.maps.Marker({
-        position: { lat: 34.9868132, lng: 135.7509563 },
+        position: { lat: 34.9873555, lng: 135.7461619 },
         map,
         title: "Kyoto Aquarium",
     });
@@ -29,6 +30,19 @@ async function initMap() {
         position: { lat: 35.0000173, lng: 135.7722135 },
         map,
         title: "Maruyama Park",
+    });
+
+    /*FOOD MARKERS*/
+    const PancakeIsu = new google.maps.Marker({
+      position: { lat: 34.9875094, lng: 135.7575774 },
+      map,
+      title: "Pancake Room",
+    });
+
+    const CoffeeNoen = new google.maps.Marker({
+      position: { lat: 35.0032821, lng: 135.7739591 },
+      map,
+      title: "Pancake Room",
     });
 
     new ClickEventHandler(map, origin);
