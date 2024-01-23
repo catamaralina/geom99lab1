@@ -1,9 +1,9 @@
 async function initMap() {
-    const directionsService = await google.maps.importLibrary("routes");
+    const directionsService = new google.maps.importLibrary("routes");
     const directionsRenderer = new google.maps.DirectionsRenderer();
     const origin = { lat: 34.9862398, lng: 135.7569057 };
     const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 16,
+      zoom: 18,
       center: origin,
     });
     
