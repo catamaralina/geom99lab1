@@ -6,7 +6,7 @@ async function initMap() {
   );
   const map = new Map(document.getElementById("map"), {
     zoom: 12,
-    center: { lat: 34.84555, lng: -111.8035 },
+    center: { lat: 34.9862398, lng: 135.7569057 },
     mapId: "4504f8b37365c3d0",
   });
   // Set LatLng and title text for the markers. The first marker (Boynton Pass)
