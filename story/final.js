@@ -13,42 +13,47 @@ async function initMap() {
     });
     
     /*PLACES MARKERS*/
-    // const KyotoStation = new google.maps.Marker({
-    //   map,
-    //   position: { lat: 34.9861821, lng: 135.7570678 },
-    //   title: "Kyoto Station",
-    //   });
+    const KyotoTower = new google.maps.Marker({
+      map,
+      position: { lat: 34.9893453, lng: 135.7566664 },
+      title: "京都タワー",
+      });
 
     const Tokiwacho = new google.maps.Marker({
       map, 
-      position: { lat: 34.9916608, lng: 135.7575092 },
-      title: "Tokiwacho",
+      position: { lat: 34.991349, lng: 135.758469 },
+      title: "常葉町",
     });
 
     const Aquarium = new google.maps.Marker({
       map,  
       position: { lat: 34.9873555, lng: 135.7461619 },
-      title: "Kyoto Aquarium",
+      title: "京都水族館",
     });
 
     const MaruyamaPark = new google.maps.Marker({
       map, 
-      position: { lat: 35.0000173, lng: 135.7722135 },
-      title: "Maruyama Park",
+      position: { lat: 34.9983422, lng: 135.771512 },
+      title: "円山公園",
     });
 
-    /*FOOD MARKERS*/
-    const PancakeIsu = new google.maps.Marker({
-      map,
-      position: { lat: 34.9875094, lng: 135.7575774 },
-
-      title: "Pancake Room",
+    const Daimonji = new google.maps.Marker({
+      map, 
+      position: { lat: 35.0228405, lng: 135.8049198 },
+      title: "京都 五山送り火",
     });
 
-    const CoffeeNoen = new google.maps.Marker({
-      position: { lat: 35.0032821, lng: 135.7739591 },
+    const Kamogawa = new google.maps.Marker({
       map,
-      title: "Pancake Room",
+      position: { lat: 35.0376503, lng: 135.7604489 },
+
+      title: "鴨川公園",
+    });
+
+    const NtlGarden = new google.maps.Marker({
+      position: { lat: 35.021703, lng: 135.757493 },
+      map,
+      title: "京都御苑",
     });
 
     /*SIMPLE CLICK EVENTS*/
