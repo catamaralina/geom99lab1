@@ -81,4 +81,5 @@ async function initMap() {
   });
 }
 
+window.initMap = initMap; /*added*/
 initMap();
