@@ -66,7 +66,7 @@ async function initMap() {
       position,
       map,
       /*Display name*/
-      title: `(${i + 1})  ${title}`,
+      title: `( ${i + 1} )  ${title}`,
       content: pin.element,
     });
 

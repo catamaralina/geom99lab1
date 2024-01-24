@@ -41,7 +41,7 @@ async function initMap() {
       position: { lat: 35.021703, lng: 135.757493 },
       title: "Kyoto National Garden",
     },
-    {
+        {
       position: { lat: 35.0151827, lng: 135.6712193 },
       title: "Arashiyama Park",
     },
