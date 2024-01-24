@@ -14,12 +14,12 @@ async function initMap() {
   // move between markers; press tab again to cycle through the map controls.
   const tourStops = [
     {
-      position: { lat: 34.9893453, lng: 135.7566664 },
-      title: "Kyoto Tower",
+      position: { lat: 34.9299942, lng: 135.7590865 },
+      title: "Fushimi Minato Park",
     },
     {
-      position: { lat: 34.991349, lng: 135.758469 },
-      title: "Tokiwacho",
+      position: { lat: 35.0337984, lng: 135.7184632 },
+      title: "Ryoanji",
     },
     {
       position: { lat: 34.9873555, lng: 135.7461619},
