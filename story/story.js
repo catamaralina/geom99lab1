@@ -69,7 +69,7 @@ async function initMap() {
 
   // Create the markers.
   tourStops.forEach(({ position, title }, i) => {
-    const pin = new PinElement({
+    const pinkPin = new PinElement({
       glyph: `${i + 1}`,
     });
     const marker = new AdvancedMarkerElement({
