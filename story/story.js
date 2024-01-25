@@ -14,10 +14,6 @@ async function initMap() {
     mapId: "4504f8b37365c3d0",
   });
 
-  const pinkPin = new PinElement({
-    background: '#F9AABB',
-    borderColor: '#e46b85',
-  });
 
   // Set LatLng and title text for the markers. 
   // Places of interest with nature
@@ -29,10 +25,6 @@ async function initMap() {
     {
       position: { lat: 35.0337984, lng: 135.7184632 },
       title: "Ryoanji",
-    },
-    {
-      position: { lat: 34.9873555, lng: 135.7461619},
-      title: "Kyoto Aquarium",
     },
     {
       position: { lat: 34.9983422, lng: 135.771512 },
@@ -58,10 +50,6 @@ async function initMap() {
       position: { lat: 34.8928089, lng: 135.812774 },
       title: "Mt Uji",
     },
-    {
-      position: { lat: 34.9671305, lng: 135.7745999 },
-      title: "Fushimi Inari",
-    },
   ];
 
   // Create an info window to share between markers.
@@ -71,11 +59,13 @@ async function initMap() {
   tourStops.forEach(({ position, title }, i) => {
     const pinkPin = new PinElement({
       glyph: `${i + 1}`,
+      background: '#F9AABB',
+      borderColor: '#e46b85',
     });
     const marker = new AdvancedMarkerElement({
       position,
       map,
-      /*Display name*/
+      /*Display on click*/
       title: `( ${i + 1} )  ${title}`,
       content: pinkPin.element,
     });
