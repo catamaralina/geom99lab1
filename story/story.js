@@ -51,10 +51,6 @@ async function initMap() {
       title: "Kamogawa Park",
     },
     {
-      position: { lat: 34.9671305, lng: 135.7745999 },
-      title: "Fushimi Inari",
-    },
-    {
       position: { lat: 35.0485703, lng: 135.7625979 },
       title: "Kyoto Botanical Gardens",
     },
