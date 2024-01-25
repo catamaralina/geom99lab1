@@ -1,4 +1,4 @@
-// const parser = new DOMParser();
+const parser = new DOMParser();
 /* -----
   OWNER: https://developers.google.com/maps/documentation/javascript/examples/event-poi
 ----- */
@@ -10,7 +10,7 @@ async function initMap() {
   );
 
   /* Sets origin*/
-  const origin = { lat: 34.9862398, lng: 135.7569057 };
+  const origin = { lat: 34.84555, lng: -111.8035 };
   
   /* Gets map*/
   const map = new google.maps.Map(document.getElementById("map"), {
@@ -77,50 +77,55 @@ async function initMap() {
     // });
 
     // new ClickEventHandler(map, origin);
+  // const tourStops = [
+  //   {
+  //     position: { lat: 34.9893453, lng: 135.7566664 },
+  //     title: "Kyoto Tower",
+  //   },
+  //   {
+  //     position: { lat: 34.991349, lng: 135.758469 },
+  //     title: "Tokiwacho",
+  //   },
+  //   {
+  //     position: { lat: 34.9873555, lng: 135.7461619},
+  //     title: "Kyoto Aquarium",
+  //   },
+  //   {
+  //     position: { lat: 34.9983422, lng: 135.771512 },
+  //     title: "Maruyama Park",
+  //   },
+  //   {
+  //     position: { lat: 35.0228405, lng: 135.8049198 },
+  //     title: "Gozan no Okuribi",
+  //   },
+  //   {
+  //     position: { lat: 35.0376503, lng: 135.7604489 },
+  //     title: "Kamogawa Park",
+  //   },
+  //   {
+  //     position: { lat: 35.021703, lng: 135.757493 },
+  //     title: "Kyoto National Garden",
+  //   },
+  // ];
   const tourStops = [
-    {
-      position: { lat: 34.9893453, lng: 135.7566664 },
-      title: "Kyoto Tower",
-    },
-    {
-      position: { lat: 34.991349, lng: 135.758469 },
-      title: "Tokiwacho",
-    },
-    {
-      position: { lat: 34.9873555, lng: 135.7461619},
-      title: "Kyoto Aquarium",
-    },
-    {
-      position: { lat: 34.9983422, lng: 135.771512 },
-      title: "Maruyama Park",
-    },
-    {
-      position: { lat: 35.0228405, lng: 135.8049198 },
-      title: "Gozan no Okuribi",
-    },
-    {
-      position: { lat: 35.0376503, lng: 135.7604489 },
-      title: "Kamogawa Park",
-    },
-    {
-      position: { lat: 35.021703, lng: 135.757493 },
-      title: "Kyoto National Garden",
-    },
+    [{ lat: 34.8791806, lng: -111.8265049 }, "Boynton Pass"],
+    [{ lat: 34.8559195, lng: -111.7988186 }, "Airport Mesa"],
+    [{ lat: 34.832149, lng: -111.7695277 }, "Chapel of the Holy Cross"],
+    [{ lat: 34.823736, lng: -111.8001857 }, "Red Rock Crossing"],
+    [{ lat: 34.800326, lng: -111.7665047 }, "Bell Rock"],
   ];
 
   // Create an info window to share between markers.
   const infoWindow = new InfoWindow();
 
   // Create the markers.
-  tourStops.forEach(({ position, title }, i) => {
-    const pin = new PinElement({
-      glyph: `${i + 1}`,
-    });
-    const marker = new AdvancedMarkerElement({
+  tourStops.forEach(([position, title], i) => {
+    const marker = new google.maps.Marker({
       position,
       map,
       title: `${i + 1}. ${title}`,
-      content: pin.element,
+      label: `${i + 1}`,
+      optimized: false,
     });
 
     // Add a click listener for each marker, and set up the info window.
