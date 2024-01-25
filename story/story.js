@@ -9,8 +9,8 @@ async function initMap() {
 
   // Set up Map
   const map = new Map(document.getElementById("map"), {
-    zoom: 12,
-    center: { lat: 34.9862398, lng: 135.7569057 },
+    zoom: 13,
+    center: { lat: 35.0175169, lng: 135.7354089 },
     mapId: "4504f8b37365c3d0",
   });
 
@@ -19,12 +19,12 @@ async function initMap() {
   // Places of interest with nature
   const tourStops = [
     {
-      position: { lat: 34.9299942, lng: 135.7590865},
-      title: "Fushimi Minato Park",
+      position: { lat: 34.9864358, lng: 135.7463893},
+      title: "Umekoji Park",
     },
     {
-      position: { lat: 34.9873555, lng: 135.7461619},
-      title: "Kyoto Aquarium",
+      position: { lat: 35.0134544, lng: 135.7489559},
+      title: "Ninomaru Garden",
     },
     {
       position: { lat: 35.0151827, lng: 135.6712193 },
@@ -55,8 +55,8 @@ async function initMap() {
       title: "Fushimi Inari",
     },
     {
-      position: { lat: 34.8928089, lng: 135.812774 },
-      title: "Mt Uji",
+      position: { lat: 35.0485703, lng: 135.7625979 },
+      title: "Kyoto Botanical Gardens",
     },
   ];
 
