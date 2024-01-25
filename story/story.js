@@ -14,6 +14,11 @@ async function initMap() {
     mapId: "4504f8b37365c3d0",
   });
 
+  const pinkPin = new PinElement({
+    background: '#F9AABB',
+    borderColor: '#e46b85',
+  });
+
   // Set LatLng and title text for the markers. 
   // Places of interest with nature
   const tourStops = [
@@ -72,7 +77,7 @@ async function initMap() {
       map,
       /*Display name*/
       title: `( ${i + 1} )  ${title}`,
-      content: pin.element,
+      content: pinkPin.element,
     });
 
     // Add a click listener for each marker, and set up the info window.
