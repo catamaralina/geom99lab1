@@ -1,20 +1,24 @@
+// SOURCE: https://developers.google.com/maps/documentation/javascript/examples/advanced-markers-accessibility
+
 async function initMap() {
   // Request needed libraries.
   const { Map, InfoWindow } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary(
     "marker",
   );
+
+  // Set up Map
   const map = new Map(document.getElementById("map"), {
     zoom: 12,
     center: { lat: 34.9862398, lng: 135.7569057 },
     mapId: "4504f8b37365c3d0",
   });
-  // Set LatLng and title text for the markers. The first marker (Boynton Pass)
-  // receives the initial focus when tab is pressed. Use arrow keys to
-  // move between markers; press tab again to cycle through the map controls.
+
+  // Set LatLng and title text for the markers. 
+  // Places of interest with nature
   const tourStops = [
     {
-      position: { lat: 34.9299942, lng: 135.7590865 },
+      position: { lat: 34.9299942, lng: 135.7590865},
       title: "Fushimi Minato Park",
     },
     {
@@ -54,6 +58,7 @@ async function initMap() {
       title: "Fushimi Inari",
     },
   ];
+
   // Create an info window to share between markers.
   const infoWindow = new InfoWindow();
 
