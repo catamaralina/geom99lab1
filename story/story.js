@@ -23,8 +23,20 @@ async function initMap() {
       title: "Fushimi Minato Park",
     },
     {
+      position: { lat: 34.9873555, lng: 135.7461619},
+      title: "Kyoto Aquarium",
+    },
+    {
+      position: { lat: 35.0151827, lng: 135.6712193 },
+      title: "Arashiyama Park",
+    },
+    {
       position: { lat: 35.0337984, lng: 135.7184632 },
       title: "Ryoanji",
+    },
+    {
+      position: { lat: 35.021703, lng: 135.757493 },
+      title: "Kyoto National Garden",
     },
     {
       position: { lat: 34.9983422, lng: 135.771512 },
@@ -32,19 +44,15 @@ async function initMap() {
     },
     {
       position: { lat: 35.0228405, lng: 135.8049198 },
-      title: "Gozan no Okuribi",
+      title: "Mt. Daimonji",
     },
     {
       position: { lat: 35.0376503, lng: 135.7604489 },
       title: "Kamogawa Park",
     },
     {
-      position: { lat: 35.021703, lng: 135.757493 },
-      title: "Kyoto National Garden",
-    },
-    {
-      position: { lat: 35.0151827, lng: 135.6712193 },
-      title: "Arashiyama Park",
+      position: { lat: 34.9671305, lng: 135.7745999 },
+      title: "Fushimi Inari",
     },
     {
       position: { lat: 34.8928089, lng: 135.812774 },
