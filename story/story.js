@@ -27,15 +27,15 @@ async function initMap() {
       title: "Ninomaru Garden",
     },
     {
-      position: { lat: 35.0151827, lng: 135.6712193 },
-      title: "Arashiyama Park",
+      position: { lat: 35.0089979, lng: 135.6746621 },
+      title: "Arashiyama Monkey Park",
     },
     {
       position: { lat: 35.0337984, lng: 135.7184632 },
       title: "Ryoanji",
     },
     {
-      position: { lat: 35.021703, lng: 135.757493 },
+      position: { lat: 35.0230347, lng: 135.7635486 },
       title: "Kyoto National Garden",
     },
     {
